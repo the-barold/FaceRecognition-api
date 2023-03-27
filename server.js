@@ -12,7 +12,7 @@ const db = knex({
     client: 'pg',
     connection: {
       host : '127.0.0.1',
-      port : 5432,
+      //port : 5432,
       user : 'barrychenault',
       password : '',
       database : 'smart-brain'
@@ -52,7 +52,7 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 //     // res = false
 // });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT, /*|| 3000,*/ () => {
     console.log(`app is running on port ${process.env.PORT}`)
 })
 
